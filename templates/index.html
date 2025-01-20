@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG Application</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <style>
+      /* Gaya untuk body */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Gaya untuk bagian landing page */
+      .landing-page {
+        background-color: #f8bbd0;
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .landing-page img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Tombol untuk mulai konsultasi */
+      .bottom-left-btn {
+        position: absolute;
+        bottom: 10%; /* Atur posisi vertikal sesuai kebutuhan */
+        left: 16%; /* Atur posisi horizontal sesuai kebutuhan */
+        border-radius: 10px;
+        background-color: #e84a74;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: -15px;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .bottom-left-btn:hover {
+        background-color: #d43f63;
+      }
+
+      /* Tombol About di kanan atas */
+      .top-right-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #e91e63;
+        display: flex;
+        margin-top: 22px;
+        margin-right: 50px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .top-right-btn:hover {
+        background-color: #d43f63;
+      }
+
+      .top-right-btn svg {
+        fill: #fff;
+        width: 18px;
+        height: 18px;
+      }
+
+      /* Gaya untuk bagian "About" */
+      .about-section {
+        background: linear-gradient(135deg, #f8bbd0, #fce4ec);
+        color: #333;
+        padding: 40px 20px 0px 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-container {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        padding: 30px;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .about-container h1 {
+        font-size: 2.2em;
+        color: #e91e63;
+        margin-bottom: 20px;
+      }
+
+      .member {
+        background-color: #fce4ec;
+        margin: 15px 0;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .member img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 3px solid #e91e63;
+        object-fit: cover;
+      }
+
+      .member div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .member h2 {
+        font-size: 1.6em;
+        color: #c2185b;
+        margin-bottom: 5px;
+      }
+
+      .member p {
+        font-size: 1.1em;
+        color: #ad1457;
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 1.1em;
+        color: #c2185b;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Bagian Landing Page -->
+    <section class="landing-page">
+      <a href="/coba" class="bottom-left-btn">Mulai Konsultasi</a>
+      <img src="../static/img/index.png" alt="Background Gambar" />
+
+      <!-- Tombol About di Kanan Atas -->
+      <a href="/about" class="top-right-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
+          />
+        </svg>
+      </a>
+    </section>
+
+<br><br><br><br><br>
+
+    <!-- Bagian About -->
+    <section class="about-section">
+      <div class="about-container">
+        <h1>Kelompok 1A - Daftar Anggota</h1>
+        <div class="member">
+          <img src="/static/img/anisa.jpg" alt="Foto Anisah" />
+          <div>
+            <h2>Anisah Fitriani</h2>
+            <p><strong>NIM:</strong> 202255202069</p>
+            <p><strong>Program Studi:</strong> Teknik Informatika</p>
+          </div>
+        </div>
+        <div class="member">
+          <img src="/static/img/shilvia.jpg" alt="Foto Shilvia" />
+          <div>
+            <h2>Shilvia Irani Sukri</h2>
+            <p><strong>NIM:</strong> 202255202004</p>
+            <p><strong>Program Studi:</strong> Teknik Informatika</p>
+          </div>
+        </div>
+        <div class="member">
+          <img src="/static/img/hosiana.jpg" alt="Foto Hosiana" />
+          <div>
+            <h2>Hosiana Nainggolan</h2>
+            <p><strong>NIM:</strong> 202455202109</p>
+            <p><strong>Program Studi:</strong> Teknik Informatika</p>
+          </div>
+        </div>
+        <div class="footer">&copy; 2025 Kelompok 1A</div>
+      </div>
+    </section>
+  </body>
+  <script src="/static/script.js"></script>
+</html>
